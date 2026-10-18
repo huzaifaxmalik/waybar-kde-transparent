@@ -1,0 +1,81 @@
+/* ~/.config/waybar/style.css  — dark transparent theme */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "JetBrainsMono NF", "Symbols Nerd Font", "Symbols Nerd Font Mono", "Font Awesome 6 Free", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: #ffffff;
+}
+
+tooltip {
+  background: rgba(15, 15, 25, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+}
+tooltip label { color: #e6e6e6; padding: 2px 6px; }
+
+/* ---------- shared pill look ---------- */
+#workspaces,
+#clock,
+#stats,
+#custom-power {
+  background: rgba(15, 15, 25, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 0 16px;
+  margin: 0;
+}
+
+#clock { padding: 0 22px; }
+#clock:hover { opacity: 0.8; }
+
+/* modules inside the stats pill */
+#cpu, #memory, #pulseaudio, #battery, #custom-network {
+  background: transparent;
+  color: #ffffff;
+  padding: 0 10px;
+}
+#cpu:hover, #memory:hover, #pulseaudio:hover, #battery:hover, #custom-network:hover { opacity: 0.8; }
+
+/* ---------- workspace buttons ---------- */
+#workspaces { padding: 0 6px; }
+
+#custom-ws1, #custom-ws2, #custom-ws3,
+#custom-ws4, #custom-ws5, #custom-ws6 {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0 12px;
+  margin: 4px 2px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+/* mouse-over / selected desktop: white background, black text */
+#custom-ws1:hover, #custom-ws2:hover, #custom-ws3:hover,
+#custom-ws4:hover, #custom-ws5:hover, #custom-ws6:hover,
+#custom-ws1.active, #custom-ws2.active, #custom-ws3.active,
+#custom-ws4.active, #custom-ws5.active, #custom-ws6.active {
+  background: #ffffff;
+  color: #0b0b12;
+  border: 1px solid #ffffff;
+}
+
+/* critical battery blink */
+#battery.critical:not(.charging) { animation: blink 1s linear infinite alternate; }
+@keyframes blink { to { opacity: 0.45; } }
+
+/* power button */
+#custom-power {
+  padding: 0 14px;
+  transition: background 0.2s ease;
+}
+#custom-power:hover { background: rgba(255, 77, 77, 0.35); }
