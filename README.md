@@ -82,7 +82,7 @@
 ### Quick install
 
 ```bash
-git clone https://github.com/<your-username>/waybar-kde-transparent.git
+git clone https://github.com/huzaifaxmalik/waybar-kde-transparent.git
 cd waybar-kde-transparent
 chmod +x install.sh
 ./install.sh
