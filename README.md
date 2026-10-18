@@ -9,10 +9,11 @@
 ![Wayland](https://img.shields.io/badge/Wayland-FFBC00?style=for-the-badge&logo=wayland&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 </div>
+---
 
 ![Preview](preview/01.png) ![Preview](preview/02.png)
 
----
+
 ## ✨ Features
 - 🪟 **Transparent dark glass pills** with soft borders and rounded corners
 - 🖥️ **KDE virtual desktop buttons** (`Desktop 1`, `Desktop 2`, …), clickable, with white-on-black highlight for the selected / hovered desktop
