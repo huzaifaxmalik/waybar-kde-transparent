@@ -9,8 +9,8 @@
 ![Wayland](https://img.shields.io/badge/Wayland-FFBC00?style=for-the-badge&logo=wayland&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-![Preview](assets/01.png)
-![Preview](assets/02.png)
+![Preview](preview/01.png)
+![Preview](preview/02.png)
 
 </div>
 
