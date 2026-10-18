@@ -2,14 +2,14 @@
 
 # 🌌 Waybar KDE Transparent
 
-**A dark, glassy, fully transparent [Waybar](https://github.com/Alexays/Waybar) setup for KDE Plasma on Wayland.**
+**A dark, glassy, fully transparent [Waybar](https://github.com/Alexays/Waybar) setup for KDE Plasma on Wayland**
 
 ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=archlinux&logoColor=white)
 ![KDE Plasma](https://img.shields.io/badge/KDE_Plasma_6-1D99F3?style=for-the-badge&logo=kde&logoColor=white)
 ![Wayland](https://img.shields.io/badge/Wayland-FFBC00?style=for-the-badge&logo=wayland&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-<!-- Replace with your own screenshot: ![Preview](assets/preview.png) -->
+
 
 </div>
 
