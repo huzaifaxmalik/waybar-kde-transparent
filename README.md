@@ -8,14 +8,10 @@
 ![KDE Plasma](https://img.shields.io/badge/KDE_Plasma_6-1D99F3?style=for-the-badge&logo=kde&logoColor=white)
 ![Wayland](https://img.shields.io/badge/Wayland-FFBC00?style=for-the-badge&logo=wayland&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
-![Preview](preview/01.png)
-![Preview](preview/02.png)
-
 </div>
+![Preview](preview/01.png) ![Preview](preview/02.png)
 
 ---
-
 ## ✨ Features
 
 - 🪟 **Transparent dark glass pills** with soft borders and rounded corners
