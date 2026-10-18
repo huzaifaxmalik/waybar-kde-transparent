@@ -1,0 +1,147 @@
+// ~/.config/waybar/config.jsonc
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+  "margin-top": 0,
+  "margin-left": 2,
+  "margin-right": 10,
+  "spacing": 8,
+
+  "modules-left":   ["group/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right":  ["group/stats", "custom/power"],
+
+  // ---------- LEFT: KDE virtual desktops ----------
+  "group/workspaces": {
+    "orientation": "horizontal",
+    "modules": ["custom/ws1", "custom/ws2", "custom/ws3", "custom/ws4", "custom/ws5", "custom/ws6"]
+  },
+
+  "custom/ws1": {
+    "exec": "~/.config/waybar/scripts/ws.sh 1",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/goto.sh 1",
+    "on-scroll-up": "~/.config/waybar/scripts/switch.sh prev",
+    "on-scroll-down": "~/.config/waybar/scripts/switch.sh next"
+  },
+  "custom/ws2": {
+    "exec": "~/.config/waybar/scripts/ws.sh 2",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/goto.sh 2",
+    "on-scroll-up": "~/.config/waybar/scripts/switch.sh prev",
+    "on-scroll-down": "~/.config/waybar/scripts/switch.sh next"
+  },
+  "custom/ws3": {
+    "exec": "~/.config/waybar/scripts/ws.sh 3",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/goto.sh 3",
+    "on-scroll-up": "~/.config/waybar/scripts/switch.sh prev",
+    "on-scroll-down": "~/.config/waybar/scripts/switch.sh next"
+  },
+  "custom/ws4": {
+    "exec": "~/.config/waybar/scripts/ws.sh 4",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/goto.sh 4",
+    "on-scroll-up": "~/.config/waybar/scripts/switch.sh prev",
+    "on-scroll-down": "~/.config/waybar/scripts/switch.sh next"
+  },
+  "custom/ws5": {
+    "exec": "~/.config/waybar/scripts/ws.sh 5",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/goto.sh 5",
+    "on-scroll-up": "~/.config/waybar/scripts/switch.sh prev",
+    "on-scroll-down": "~/.config/waybar/scripts/switch.sh next"
+  },
+  "custom/ws6": {
+    "exec": "~/.config/waybar/scripts/ws.sh 6",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/goto.sh 6",
+    "on-scroll-up": "~/.config/waybar/scripts/switch.sh prev",
+    "on-scroll-down": "~/.config/waybar/scripts/switch.sh next"
+  },
+
+  // ---------- CLOCK: click to toggle time <-> date + time ----------
+  "clock": {
+    "interval": 1,
+    "format":     "<span color='#00e5ff' size='14336'></span>  <span color='#ffffff' weight='bold'>{:%H:%M}</span>",
+    "format-alt": "<span color='#00e5ff' size='14336'></span>  <span color='#ffffff' weight='bold'>{:%a, %d %b %Y   %H:%M}</span>",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "format": {
+        "months":   "<span color='#00e5ff'><b>{}</b></span>",
+        "days":     "<span color='#e6e6e6'><b>{}</b></span>",
+        "weekdays": "<span color='#00e5ff'><b>{}</b></span>",
+        "today":    "<span color='#ff4d4d'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+
+  // ---------- RIGHT ----------
+  "group/stats": {
+    "orientation": "horizontal",
+    "modules": ["cpu", "memory", "pulseaudio", "battery", "custom/network"]
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": "<span color='#00e5ff' size='14336'></span> <span color='#ffffff' weight='bold'> {usage}%</span>"
+  },
+
+  "memory": {
+    "interval": 3,
+    "format": "<span color='#00e5ff' size='14336'></span> <span color='#ffffff' weight='bold'> {percentage}%</span>",
+    "tooltip-format": "{used:0.1f} GiB / {total:0.1f} GiB"
+  },
+
+  "pulseaudio": {
+    "format": "<span color='#ffd60a' size='14336'>{icon}</span> <span color='#ffffff' weight='bold'> {volume}%</span>",
+    "format-muted": "<span color='#ffd60a' size='14336'></span> <span color='#ff4d4d' weight='bold'> Muted</span>",
+    "format-icons": { "default": ["", "", ""] },
+    "scroll-step": 5,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "kcmshell6 kcm_pulseaudio",
+    "tooltip-format": "{desc}"
+  },
+
+  // Battery icon: cyan normal | orange <40% | red <=15% | green + yellow bolt when charging
+  "battery": {
+    "interval": 10,
+    "states": { "warning": 39, "critical": 15 },
+    "format":          "<span color='#90EE90' size='14336'>{icon}</span> <span color='#ffffff' weight='bold'> {capacity}%</span>",
+    "format-full":     "<span color='#3ddc84' size='14336'>{icon}</span> <span color='#ffffff' weight='bold'> {capacity}%</span>",
+    "format-warning":  "<span color='#ff9f1a' size='14336'>{icon}</span> <span color='#ffffff' weight='bold'> {capacity}%</span>",
+    "format-critical": "<span color='#ff4d4d' size='14336'>{icon}</span> <span color='#ffffff' weight='bold'> {capacity}%</span>",
+    "format-charging": "<span color='#3ddc84' size='14336'>{icon}</span><span color='#ffd60a' size='10240'></span> <span color='#ffffff' weight='bold'> {capacity}%</span>",
+    "format-plugged":  "<span color='#3ddc84' size='14336'>{icon}</span><span color='#ffd60a' size='10240'></span> <span color='#ffffff' weight='bold'> {capacity}%</span>",
+    "format-icons": ["","","","",""],
+    "tooltip-format": "{timeTo}"
+  },
+
+  "custom/network": {
+    "exec": "~/.config/waybar/scripts/network.sh",
+    "return-type": "json",
+    "interval": 3,
+    "tooltip": false,
+    "on-click": "systemsettings kcm_networkmanagement"
+  },
+
+  "custom/power": {
+    "format": "<span color='#ffffff' size='14336'></span>",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/power.sh"
+  }
+}
