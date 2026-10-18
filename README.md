@@ -231,12 +231,6 @@ nmcli dev wifi list --rescan no
 </details>
 
 <details>
-<summary><b>Clock error on click: "invalid arg-id in format string"</b></summary>
-
-The `format-alt` line must contain exactly one time placeholder, for example `{:%a, %d %b %Y   %H:%M}`. Do not use two `{:...}` placeholders in the same format.
-</details>
-
-<details>
 <summary><b>Volume module does nothing</b></summary>
 
 Make sure `pactl` is available (`pipewire-pulse` or `pulseaudio`) and a default audio sink is set.
