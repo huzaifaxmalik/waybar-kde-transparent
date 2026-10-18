@@ -14,7 +14,6 @@
 
 ---
 ## ✨ Features
-
 - 🪟 **Transparent dark glass pills** with soft borders and rounded corners
 - 🖥️ **KDE virtual desktop buttons** (`Desktop 1`, `Desktop 2`, …), clickable, with white-on-black highlight for the selected / hovered desktop
 - 📊 **System stats:** CPU, RAM, Volume, Battery and WiFi
@@ -27,7 +26,6 @@
 - 🔤 **Bold text and enlarged Nerd Font icons** throughout
 
 ## 🧩 Layout
-
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │ [Desktop 1][Desktop 2]…            Clock            CPU  RAM  VOL  BAT  WiFi │ ⏻ │
@@ -36,7 +34,6 @@
 ```
 
 ## 🎨 Color Scheme
-
 | Element                   | Color                               |
 | ------------------------- | ----------------------------------- |
 | Bar / pill background     | `rgba(15, 15, 25, 0.55)` (glass)    |
