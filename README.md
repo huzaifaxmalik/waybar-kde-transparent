@@ -109,12 +109,6 @@ cp scripts/*.sh ~/.config/waybar/scripts/
 chmod +x ~/.config/waybar/scripts/*.sh
 ```
 
-### ⚠️ Remove the default Plasma panel
-
-Plasma's own panel will overlap with Waybar. Remove it:
-
-**Right-click the panel → Enter Edit Mode → More → Remove Panel**
-
 ## ▶️ Autostart
 
 `install.sh` creates `~/.config/autostart/waybar.desktop` for you. To set it up by hand:
